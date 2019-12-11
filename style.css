@@ -124,7 +124,7 @@ ABOUT
 }
 
 .about-img img {
-	border-radius: 50%;
+	border: 2px solid #2196f3;
 }
 
 .about-bio {
@@ -240,7 +240,6 @@ TRAVEL
   margin: 0;
 }
 
-CSS
 @media(max-width: 1000px) {
   #getting-around {
     padding: 0 40px;
@@ -265,6 +264,53 @@ CSS
   #getting-around ul.grid li p {
     text-align: center;
   }
+}
+
+/* --------------
+FAMOUS QUOTES
+-----------------*/
+
+#famous-quotes {
+	background-color: #fafafa;
+	padding-bottom: 40px;
+	text-align: center;
+}
+
+#famous-quotes .portrait-photos {
+	border-radius: 50%;
+	border: 4px solid #2196f3;
+	margin-bottom: 10px;
+}
+
+#famous-quotes .portrait-photos:first-child {
+	margin-top: 20px;
+}
+
+#famout-quotes .quote {
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+#famous-quotes .author {
+	margin: 20px auto;
+}
+
+#famout-quote .author:last-child {
+	margin-bottom: 0;
+}
+
+@media(max-width: 1000px) {
+	#famous-quotes .quote {
+		font-size: 18px;
+		padding: 0 20px;
+	}
+
+	#famous-quotes .author {
+		font-size: 14px;
+	}
 }
 
 /* --------------
