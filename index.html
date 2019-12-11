@@ -8,8 +8,24 @@
 		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/edf397c00e.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 	</head>
-	<body>
+	<body id="top">
+		<header>
+			<h2><a href="#"><img src="img/logo.png" alt="" id="logo"></a></h2>
+			<nav>
+				<ul>
+					<li><a href="#top">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#getting-around">Travel</a></li>
+					<li><a href="#famous-quotes">Quotes</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#social-media">Links</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- ******************************** -->
 		<div id="hero">
 			<div class="background-image"></div>
 			<h1>Beautiful Alaskan Photo Portfolio</h1>
@@ -68,6 +84,22 @@
 			<hr>
 		</div>
 		<!-- ******************************** -->
+		<div id="contact">
+			<h3 class="title">My Studio Location</h3>
+			<section class="flexbox-section">
+				<p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2348.0548085236996!2d-1.1031798838305067!3d53.94853428010965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487930e27bdd5e7d%3A0x3a8cf543039a11a7!2s5%20St%20George&#39;s%20Pl%2C%20York%20YO24%201DT!5e0!3m2!1sen!2suk!4v1576075116973!5m2!1sen!2suk" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				</p>
+				<p>
+					5 St. George's Place<br>
+					York<br>
+					YO24 1DT
+				</p>
+			</section>
+		</div>
+		<!-- ******************************** -->
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwLi6EMgGSwW_gVZ70MRzfbvKD84IpcePQ9DMtkogvPMe4LA/viewform?embedded=true" width="100%" height="1003" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+		<!-- ******************************** -->
 		<footer id="social-media">
 			<ul>
 				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -78,5 +110,20 @@
 			<p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> It sure is fun to create websites.</p>
 			<p>&ldquo;Tell me and I forget, teach me and I may rembmer, involve me and I learn.&rdquo; &mdash;Benjamin Franklin</p>
 		</footer>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('a[href^="#"]').on('click',function (e) {e.preventDefault();
+
+					var target = this.hash;
+					var $target = $(target);
+
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top-175
+					}, 900, 'swing', function () {
+						window.location.hash = target-175;
+					});
+				});
+			});
+	</script>
 	</body>
 </html>
